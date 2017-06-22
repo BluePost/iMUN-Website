@@ -25,7 +25,11 @@
  *
  * Contributing author: Tyler Smith (@mbmufffin)
  */
-
+a {
+			color: inherit;
+			text-decoration: inherit;
+			}
+			
 
 /* Browser Resets
 *********************************/

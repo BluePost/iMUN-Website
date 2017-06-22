@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -6,434 +5,25 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>iMUN</title>
-
 		<!--Facebook Link Sharing Data-->
 		<meta property="og:title" content="iMUN"/>
 		<meta property="og:type" content="website"/>
 		<meta property="og:url" content="https://imun.co.uk"/>
-		<meta property="og:image" content="https://dash.imun.co.uk/img/logo/iMUN_blue_-_trans.png"/>
+		<meta property="og:image" content="assets/img/iMUN_blue_-_trans.png"/>
 		<meta property="og:site_name" content="iMUN"/>
 		<meta property="og:description" content="iMUN is an advanced conference manager designed for use at Model United Nations conferences."/>
-
-
 		<!-- Bootstrap -->
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-		<style>
-		/* For mobile:like samsung grand(480 * 800): */
-@media screen and (max-width:480px) {
-	.get-started-btn { padding: 20px 50px; }
-}
+		<link href="style.css" rel="stylesheet">
+		<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/icons/apple-touch-icon.png?v=2">
+		<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/icons/favicon-32x32.png?v=2">
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/icons/favicon-16x16.png?v=2">
+		<link rel="manifest" href="/assets/img/icons/manifest.json?v=2">
+		<link rel="mask-icon" href="/assets/img/icons/safari-pinned-tab.svg?v=2" color="#ffffff">
+		<link rel="shortcut icon" href="/assets/img/icons/favicon.ico?v=2">
+		<meta name="msapplication-config" content="/assets/img/icons/browserconfig.xml?v=2">
+		<meta name="theme-color" content="#ffffff">
 
-/* For iphone: */
-@media screen and (max-width:320px) {
-}
-/* For ipad: */
-@media screen and (max-width:760px) {
-}
-@media screen and (max-width:991px) {
-	.features-leftcol { border: none; padding: 0 0 0 20px; }
-	.features-rightcol { padding: 0 0 0 20px; }
-	.margin-bottom { margin-bottom: 0; }
-	.features p { margin-bottom: 50px; }
-}
-/*
- * jQuery FlexSlider v2.2.0
- * http://www.woothemes.com/flexslider/
- *
- * Copyright 2012 WooThemes
- * Free to use under the GPLv2 license.
- * http://www.gnu.org/licenses/gpl-2.0.html
- *
- * Contributing author: Tyler Smith (@mbmufffin)
- */
-
-
-/* Browser Resets
-*********************************/
-.flex-container a:active,
-.flexslider a:active,
-.flex-container a:focus,
-.flexslider a:focus  {outline: none;}
-.slides,
-.flex-control-nav,
-.flex-direction-nav {margin: 0; padding: 0; list-style: none;}
-
-/* Icon Fonts
-*********************************/
-/* Font-face Icons */
-@font-face {
-	font-family: 'flexslider-icon';
-	src:url('fonts/flexslider-icon.eot');
-	src:url('fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'),
-		url('fonts/flexslider-icon.woff') format('woff'),
-		url('fonts/flexslider-icon.ttf') format('truetype'),
-		url('fonts/flexslider-icon.svg#flexslider-icon') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-/* FlexSlider Necessary Styles
-*********************************/
-.flexslider {margin: 0; padding: 0;}
-.flexslider .slides > li {display: none; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
-.flexslider .slides img {width: 100%; display: block;}
-.flex-pauseplay span {text-transform: capitalize;}
-
-/* Clearfix for the .slides element */
-.slides:after {content: "\0020"; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
-html[xmlns] .slides {display: block;}
-* html .slides {height: 1%;}
-
-/* No JavaScript Fallback */
-/* If you are not using another script, such as Modernizr, make sure you
- * include js that eliminates this class on page load */
-.no-js .slides > li:first-child {display: block;}
-
-/* FlexSlider Default Theme
-*********************************/
-.flexslider { margin: 0 0 60px; background: #fff; border: 4px solid #fff; position: relative; -webkit-border-radius: 4px; -moz-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.2); -moz-box-shadow: 0 1px 4px rgba(0,0,0,.2); -o-box-shadow: 0 1px 4px rgba(0,0,0,.2); box-shadow: 0 1px 4px rgba(0,0,0,.2); zoom: 1; }
-.flex-viewport { max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; -o-transition: all 1s ease; transition: all 1s ease; }
-.loading .flex-viewport { max-height: 300px; }
-.flexslider .slides { zoom: 1; }
-.carousel li { margin-right: 5px; }
-
-/* Direction Nav */
-.flex-direction-nav {*height: 0;}
-.flex-direction-nav a  { display: block; width: 40px; height: 40px; margin: -20px 0 0; position: absolute; top: 50%; z-index: 10; overflow: hidden; opacity: 0; cursor: pointer; color: rgba(0,0,0,0.8); text-shadow: 1px 1px 0 rgba(255,255,255,0.3); -webkit-transition: all .3s ease; -moz-transition: all .3s ease; transition: all .3s ease; }
-.flex-direction-nav .flex-prev { left: -50px; }
-.flex-direction-nav .flex-next { right: -50px; text-align: right; }
-.flexslider:hover .flex-prev { opacity: 0.7; left: 10px; }
-.flexslider:hover .flex-next { opacity: 0.7; right: 10px; }
-.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover { opacity: 1; }
-.flex-direction-nav .flex-disabled { opacity: 0!important; filter:alpha(opacity=0); cursor: default; }
-.flex-direction-nav a:before  { font-family: "flexslider-icon"; font-size: 40px; display: inline-block; content: '\f001'; }
-.flex-direction-nav a.flex-next:before  { content: '\f002'; }
-
-/* Pause/Play */
-.flex-pauseplay a { display: block; width: 20px; height: 20px; position: absolute; bottom: 5px; left: 10px; opacity: 0.8; z-index: 10; overflow: hidden; cursor: pointer; color: #000; }
-.flex-pauseplay a:before  { font-family: "flexslider-icon"; font-size: 20px; display: inline-block; content: '\f004'; }
-.flex-pauseplay a:hover  { opacity: 1; }
-.flex-pauseplay a.flex-play:before { content: '\f003'; }
-
-/* Control Nav */
-.flex-control-nav {width: 100%; position: relative; text-align: center;}
-.flex-control-nav li {margin: 0 6px; display: inline-block; zoom: 1; *display: inline;}
-.flex-control-paging li a {width: 13px; height: 13px; display: block; background: #5c696a; background: rgba(92,105,106,0.7); cursor: pointer; text-indent: -9999px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; border: 3px solid #fff; }
-.flex-control-paging li a:hover { background: #fff; background: rgb(255,255,255); }
-.flex-control-paging li a.flex-active { background: #fff; background: rgb(255,255,255); cursor: default; }
-
-.flex-control-thumbs {margin: 5px 0 0; position: static; overflow: hidden;}
-.flex-control-thumbs li {width: 25%; float: left; margin: 0;}
-.flex-control-thumbs img {width: 100%; display: block; opacity: .7; cursor: pointer;}
-.flex-control-thumbs img:hover {opacity: 1;}
-.flex-control-thumbs .flex-active {opacity: 1; cursor: default;}
-
-@media screen and (max-width: 860px) {
-  .flex-direction-nav .flex-prev { opacity: 1; left: 10px;}
-  .flex-direction-nav .flex-next { opacity: 1; right: 10px;}
-}
-
-/* ! normalize.css v1.0.0 | MIT License | git.io/normalize */
-
-/* ==========================================================================
-HTML5 display definitions
-========================================================================== */
-
-/* * Corrects `block` display not defined in IE 6/7/8/9 and Firefox 3. */
-
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary { display: block; }
-/* * Corrects `inline-block` display not defined in IE 6/7/8/9 and Firefox 3. */
-audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
-/* * Prevents modern browsers from displaying `audio` without controls.
-* Remove excess height in iOS 5 devices. */
-audio:not([controls]) { display: none; height: 0; }
-/* * Addresses styling for `hidden` attribute not present in IE 7/8/9, Firefox 3, * and Safari 4.
-* Known issue:no IE 6 support. */
-[hidden] { display: none; }
-/* ==========================================================================
-Base
-========================================================================== */
-/* * 1. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
-*    `em` units.
-* 2. Prevents iOS text size adjust after orientation change, without disabling
-*    user zoom. */
-
-html { font-size: 100%; /* 1 */
-    -webkit-text-size-adjust: 100%; /* 2 */
--ms-text-size-adjust: 100%; /* 2 */ }
-/* * Addresses `font-family` inconsistency between `textarea` and other form
-* elements. */
-html, button, input, select, textarea { font-family: 'Lato', sans-serif; }
-/* * Addresses margins handled incorrectly in IE 6/7. */
-body { margin: 0; font-family: 'Lato', sans-serif; }
-/* ==========================================================================
-Links
-========================================================================== */
-/* * Addresses `outline` inconsistency between Chrome and other browsers. */
-
-a:focus { outline: thin dotted; }
-/* * Improves readability when focused and also mouse hovered in all browsers. */
-a:active, a:hover { outline: 0; }
-/* ==========================================================================
-Typography
-========================================================================== */
-/* * Addresses font sizes and margins set differently in IE 6/7.
-* Addresses font sizes within `section` and `article` in Firefox 4+, Safari 5, * and Chrome. */
-
-h1 { font-size: 2em; margin: 0.67em 0; }
-h2 { font-size: 1.5em; margin: 0.83em 0; }
-h3 { font-size: 1.17em; margin: 1em 0; }
-h4 { font-size: 1em; margin: 1.33em 0; }
-h5 { font-size: 0.83em; margin: 1.67em 0; }
-h6 { font-size: 0.75em; margin: 2.33em 0; }
-/* * Addresses styling not present in IE 7/8/9, Safari 5, and Chrome. */
-abbr[title] { border-bottom: 1px dotted; }
-/* * Addresses style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome. */
-b, strong { font-weight: bold; }
-blockquote { margin: 1em 40px; }
-/* * Addresses styling not present in Safari 5 and Chrome. */
-dfn { font-style: italic; }
-/* * Addresses styling not present in IE 6/7/8/9. */
-mark { background: #ff0; color: #000; }
-/* * Addresses margins set differently in IE 6/7. */
-p, pre { margin: 1em 0; }
-/* * Corrects font family set oddly in IE 6, Safari 4/5, and Chrome. */
-code, kbd, pre, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
-/* * Improves readability of pre-formatted text in all browsers. */
-pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
-/* * Addresses CSS quotes not supported in IE 6/7. */
-q { quotes: none; }
-/* * Addresses `quotes` property not supported in Safari 4. */
-q:before, q:after { content: ''; content: none; }
-small { font-size: 75%; }
-/* * Prevents `sub` and `sup` affecting `line-height` in all browsers. */
-sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
-sup { top: -0.5em; }
-sub { bottom: -0.25em; }
-/* ==========================================================================
-Lists
-========================================================================== */
-/* * Addresses margins set differently in IE 6/7. */
-
-dl, menu, ol, ul { margin: 1em 0; }
-dd { margin: 0 0 0 40px; }
-/* * Addresses paddings set differently in IE 6/7. */
-menu, ol, ul { padding: 0 0 0 40px; }
-/* * Corrects list images handled incorrectly in IE 7. */
-nav ul, nav ol { list-style: none; list-style-image: none; }
-/* ==========================================================================
-Embedded content
-========================================================================== */
-/* * 1. Removes border when inside `a` element in IE 6/7/8/9 and Firefox 3.
-* 2. Improves image quality when scaled in IE 7. */
-
-img { border: 0; /* 1 */
--ms-interpolation-mode: bicubic; /* 2 */ }
-/* * Corrects overflow displayed oddly in IE 9. */
-svg:not(:root) { overflow: hidden; }
-/* ==========================================================================
-Figures
-========================================================================== */
-/* * Addresses margin not present in IE 6/7/8/9, Safari 5, and Opera 11. */
-
-figure { margin: 0; }
-/* ==========================================================================
-Forms
-========================================================================== */
-/* * Corrects margin displayed oddly in IE 6/7. */
-
-form { margin: 0; }
-/* * Define consistent border, margin, and padding. */
-fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
-/* * 1. Corrects color not being inherited in IE 6/7/8/9.
-* 2. Corrects text not wrapping in Firefox 3.
-* 3. Corrects alignment displayed oddly in IE 6/7. */
-legend { border: 0; /* 1 */
-    padding: 0; white-space: normal; /* 2 */
-*margin-left: -7px; /* 3 */ }
-/* * 1. Corrects font size not being inherited in all browsers.
-* 2. Addresses margins set differently in IE 6/7, Firefox 3+, Safari 5, *    and Chrome.
-* 3. Improves appearance and consistency in all browsers. */
-button, input, select, textarea { font-size: 100%; /* 1 */
-    margin: 0; /* 2 */
-    vertical-align: baseline; /* 3 */
-*vertical-align: middle; /* 3 */ }
-/* * Addresses Firefox 3+ setting `line-height` on `input` using ` !important` in
-* the UA stylesheet. */
-button, input { line-height: normal; }
-/* * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
-*    and `video` controls.
-* 2. Corrects inability to style clickable `input` types in iOS.
-* 3. Improves usability and consistency of cursor style between image-type
-*    `input` and others.
-* 4. Removes inner spacing in IE 7 without affecting normal text inputs.
-*    Known issue:inner spacing remains in IE 6. */
-button, html input[type="button"], /* 1 */
-input[type="reset"], input[type="submit"] { -webkit-appearance: button; /* 2 */
-    cursor: pointer; /* 3 */
-*overflow: visible; /* 4 */ }
-/* * Re-set default cursor for disabled elements. */
-button[disabled], input[disabled] { cursor: default; }
-/* * 1. Addresses box sizing set to content-box in IE 8/9.
-* 2. Removes excess padding in IE 8/9.
-* 3. Removes excess padding in IE 7.
-*    Known issue:excess padding remains in IE 6. */
-input[type="checkbox"], input[type="radio"] { box-sizing: border-box; /* 1 */
-    padding: 0; /* 2 */
-    *height: 13px; /* 3 */
-*width: 13px; /* 3 */ }
-/* * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
-* 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
-*    (include `-moz` to future-proof). */
-input[type="search"] { -webkit-appearance: textfield; /* 1 */
-    -moz-box-sizing: content-box; -webkit-box-sizing: content-box; /* 2 */
-box-sizing: content-box; }
-/* * Removes inner padding and search cancel button in Safari 5 and Chrome
-* on OS X. */
-input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
-/* * Removes inner padding and border in Firefox 3+. */
-button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
-/* * 1. Removes default vertical scrollbar in IE 6/7/8/9.
-* 2. Improves readability and alignment in all browsers. */
-textarea { overflow: auto; /* 1 */
-vertical-align: top; /* 2 */ }
-/* ==========================================================================
-Tables
-========================================================================== */
-/* * Remove most spacing between table cells. */
-
-table { border-collapse: collapse; border-spacing: 0; }
-/* ==========================================================================
-Clearfix
-========================================================================== */
-.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
-* html .clearfix { zoom: 1; }
-/* IE6 */
-*:first-child+html .clearfix { zoom: 1; }
-/* IE7 */
-/* ==========================================================================
-Headings
-========================================================================== */
-
-.hero h1 { font-size: 60px; font-weight: 100; color: #fff; letter-spacing: -1px; margin: 100px 0 20px 0; }
-.download-now h1 { font-size: 55px; font-weight: 100; color: #fff; margin: 100px 0 20px 0; }
-.testimonials h1 { color: #fff; font-size: 43px; font-weight: 100; margin: 20px 0 80px 0; font-style: italic; }
-.features h1 { color: #9197a8; font-size: 15px; margin: 0 0 20px 0; text-transform: uppercase; }
-.design h1 { color: #abbcc3; font-size: 38px; font-weight: 300; margin-top: 0; }
-/* ==========================================================================
-Custom Styles
-========================================================================== */
-p { font-weight: 300; }
-.navigation { background-color: #1F1F1F; }
-.nav-last { margin-bottom: 50px; }
-nav ul { list-style: none; padding: 0; }
-nav ul li a { color: rgba(255, 255, 255, 0.6); padding: 20px; display: block; border-bottom: 1px dotted rgba(255, 255, 255, 0.2); transition: all 0.5s ease; -moz-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; padding-left: 0; position: relative; }
-nav ul li a:hover, nav ul li a:focus { color: rgba(255, 255, 255, 1); text-decoration: none; }
-.indicator { position: absolute; right: 0 !important; }
-.pull { display: none; }
-.hero { background: url('https://dash.imun.co.uk/img/website/background/barack_obama_un_sc_lores.png') no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; padding: 65px 0; height: auto; }
-.hero p { color: #d0e7e9; font-style: italic; font-size: 17px; }
-.hero a { color: #fff; }
-
-.get-started-btn { background-color: #7accc8; padding: 20px 80px; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; font-size: 22px; letter-spacing: 2px; box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.4); transition: all 0.5s ease; -moz-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; display: inline-block; }
-.get-started-btn:hover, .get-started-btn:focus { text-decoration: none; background-color: #367fa9; }
-.download-now p { color: #fff; font-size: 16px; margin: 40px 30px 40px 0; line-height: 30px; }
-.download-btn { border: solid 3px #fff; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; font-size: 17px; letter-spacing: 2px; transition: all 0.5s ease; padding: 15px 70px; display: inline-block; color: #fff; margin-bottom: 185px; }
-.download-btn:hover, .download-btn:focus { text-decoration: none; border-color: #a58347; color: #a58347; }
-.features p { color: #7a8387; font-size: 16px; word-spacing: 2px; line-height: 30px; }
-.features-leftcol { border-right: 1px solid rgba(208, 217, 226, 0.4); padding-right: 60px; }
-.features-rightcol { padding-left: 60px; }
-.margin-bottom { margin-bottom: 70px; }
-.try-btn { background-color: #f69679; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; font-size: 17px; color: #fff; transition: all 0.5s ease; -moz-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; display: inline-block; padding: 15px 50px; margin: 70px 0 70px; }
-.try-btn:hover, .try-btn:focus { background-color: #e37857; color: #fff; text-decoration: none; }
-.design { padding: 100px 0; background-color: #f6f6f4; position: relative; }
-.flat-box { background-color: #fff; -webkit-box-shadow: 0px 3px 0px 0px rgba(234, 234, 234, 1); -moz-box-shadow: 0px 3px 0px 0px rgba(234, 234, 234, 1); box-shadow: 0px 3px 0px 0px rgba(234, 234, 234, 1); transition: all 0.5s ease; -moz-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; }
-.flat-box:hover, .flat-box:focus { transform: translate(0, -15px); -webkit-transform: translate(0, -15px); -o-transform: translate(0, -15px); -moz-transform: translate(0, -15px); }
-.colourway { height: 346px; }
-.colour1 { background-color: #f69679; }
-.colour2 { background-color: #367fa9; }
-.colour3 { background-color: #7accc8; }
-.colour4 { background-color: #373b44; }
-.title { font-size: 15px; color: #9197a8; text-transform: uppercase; font-weight: 600; letter-spacing: 2px; padding: 20px 40px 0; }
-.feature-text { padding: 0px 20px 40px 40px; font-style: italic; color: #7a8387; font-size: 16px; }
-.design-content p { color: #abbcc3; line-height: 30px; font-weight: 300; }
-.controls a { color: #959595; transition: all 0.5s ease; -moz-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; }
-.controls a:hover, .controls a:focus { color: #555555; }
-.controls .prev { margin-right: 5px; }
-footer { background-color: #7accc8; padding: 75px 0 100px; }
-footer p { color: #fff; line-height: 30px; }
-.footer-nav { list-style: none; padding: 0; }
-.footer-nav li a { display: block; color: #fff; padding: 5px; transition: all 0.5s ease; -moz-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; }
-.footer-nav li a:hover, .footer-nav li a:focus { text-decoration: none; color: #5db3af; }
-.badge-btn:hover, .badge-btn:focus { -webkit-transform: rotate(360deg); -moz-transform: rotate(360deg); -o-transform: rotate(360deg); }
-.footer-credit { font-size: 12px; text-transform: uppercase; letter-spacing: 5px; }
-footer a { color: #42817e; transition: all 0.5s ease; -moz-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; }
-footer a:hover, footer a:focus { color: #2f5c5a; text-decoration: none; }
-/* ==========================================================================
-Animations
-========================================================================== */
-.animated { -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-fill-mode: both; animation-fill-mode: both; }
-.animated.infinite { -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite; }
-.animated.hinge { -webkit-animation-duration: 2s; animation-duration: 2s; }
-@-webkit-keyframes bounceInDown {
-    0% { opacity: 0; -webkit-transform: translateY(-2000px); transform: translateY(-2000px); }
-    60% { opacity: 1; -webkit-transform: translateY(30px); transform: translateY(30px); }
-    80% { -webkit-transform: translateY(-10px); transform: translateY(-10px); }
-    100% { -webkit-transform: translateY(0); transform: translateY(0); }
-}
-@keyframes bounceInDown {
-    0% { opacity: 0; -webkit-transform: translateY(-2000px); -ms-transform: translateY(-2000px); transform: translateY(-2000px); }
-    60% { opacity: 1; -webkit-transform: translateY(30px); -ms-transform: translateY(30px); transform: translateY(30px); }
-    80% { -webkit-transform: translateY(-10px); -ms-transform: translateY(-10px); transform: translateY(-10px); }
-    100% { -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
-}
-.bounceInDown { -webkit-animation-name: bounceInDown; animation-name: bounceInDown; }
-@-webkit-keyframes fadeInUpDelay {
-    0% { opacity: 0; -webkit-transform: translateY(20px); transform: translateY(20px); }
-    100% { opacity: 1; -webkit-transform: translateY(0); transform: translateY(0); }
-}
-@keyframes fadeInUpDelay {
-    0% { opacity: 0; -webkit-transform: translateY(20px); -ms-transform: translateY(20px); transform: translateY(20px); }
-    100% { opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
-}
-.fadeInUpDelay { -webkit-animation-name: fadeInUpDelay; animation-name: fadeInUpDelay; animation-delay: 1s; -webkit-animation-delay: 1s; }
-@-webkit-keyframes fadeInUp {
-    0% { opacity: 0; -webkit-transform: translateY(20px); transform: translateY(20px); }
-    100% { opacity: 1; -webkit-transform: translateY(0); transform: translateY(0); }
-}
-@keyframes fadeInUp {
-    0% { opacity: 0; -webkit-transform: translateY(20px); -ms-transform: translateY(20px); transform: translateY(20px); }
-    100% { opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
-}
-.fadeInUp { -webkit-animation-name: fadeInUp; animation-name: fadeInUp; }
-@-webkit-keyframes fadeInDown {
-    0% { opacity: 0; -webkit-transform: translateY(-20px); transform: translateY(-20px); }
-    100% { opacity: 1; -webkit-transform: translateY(0); transform: translateY(0); }
-}
-@keyframes fadeInDown {
-    0% { opacity: 0; -webkit-transform: translateY(-20px); -ms-transform: translateY(-20px); transform: translateY(-20px); }
-    100% { opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
-}
-.fadeInDown { -webkit-animation-name: fadeInDown; animation-name: fadeInDown; }
-@-webkit-keyframes fadeInUpD {
-    0% { opacity: 0; -webkit-transform: translateY(20px); transform: translateY(20px); }
-    100% { opacity: 1; -webkit-transform: translateY(0); transform: translateY(0); }
-}
-@keyframes fadeInUpD {
-    0% { opacity: 0; -webkit-transform: translateY(20px); -ms-transform: translateY(20px); transform: translateY(20px); }
-    100% { opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
-}
-.fadeInUpD { -webkit-animation-name: fadeInUpD; animation-name: fadeInUpD; animation-delay: 0.5s; -webkit-animation-delay: 0.5s; }
-/* ==========================================================================
-Waypoints
-========================================================================== */
-.wp1, .wp2, .wp3, .wp4, .wp5, .wp6 { visibility: hidden; }
-.bounceInLeft, .bounceInRight, .fadeInUp, .fadeInUpDelay, .fadeInDown, .fadeInUpD { visibility: visible; }
-		a {
-			color: inherit;
-			text-decoration: inherit;
-		}
-		</style>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
 		<!-- Fonts -->
@@ -444,285 +34,177 @@ Waypoints
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
-
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		<script src="https://dash.imun.co.uk/theme/website/js/scripts.js?v=1.7"></script>
+		<script src="assets/js/scripts.js?v=1.7"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.0/jquery.flexslider.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.5.6/jquery.smooth-scroll.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-		<script src="https://dash.imun.co.uk/theme/website/js/waypoints.min.js"></script>
-
-
-
+		<script src="assets/js/waypoints.min.js"></script>
 	</head>
 	<body>
-			<section class="navigation">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
-							<nav class="pull">
-								<ul class="top-nav">
-									<li><a href="#getstarted">About<span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
-									<li><a href="http://blog.bluepost.xyz">Blog <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
-									<li><a href="https://dash.imun.co.uk">Login <span class="indicator"><i class="fa fa-sign-in"></i></span></a></li>
-								</ul>
-							</nav>
-						</div>
+		<section class="hero" id="hero">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-left">
+						<a href="https://bluepost.xyz" target="_blank"><img src="assets/img/bp_final_lite.png" alt="BluePost Development Logo" style="height: 80px;" /></a>
+					</div>
+					<div class="col-md-8 col-md-offset-2 text-center">
+						<h1 class="animated bounceInDown"><img src="assets/img/iMUN_blue_-_trans.png" alt="iMUN Logo" style="width: 300px;" /></h1>
+						<h2 class="animated fadeInUpDelay">An Advanced, Web Based, Conference Manager for Model United Nations Conferences.</h2>
 					</div>
 				</div>
-			</section>
-			<section class="hero" id="hero">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12 text-right">
-				<a href="#"><i class="fa fa-navicon fa-2x nav_slide_button"></i></a>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2 text-center">
-				<h1 class="animated bounceInDown">iMUN</h1>
-				<p class="animated fadeInUpDelay">An Advanced, Web Based, Conference Manager for Model United Nations Conferences.</p>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-2 col-md-offset-5 text-center" style="padding-top: 50px; padding-bottom: 100px;">
-				<a href="https://www.youtube.com/embed/w_q3845U5dM?autoplay=1" class="various fancybox.iframe" style="padding-top: 50px;"><i class="fa fa-play-circle-o fa-5x"></i><br/><br/><br/></a>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2 text-center">
-				<a href="#getstarted" class="get-started-btn">Learn More</a>
-                                <a href="//dash.imun.co.uk" class="get-started-btn">Login</a>
-			</div>
-		</div>
-	</div>
-</section>
-<section class="download-now" style="background: #367fa9; width: 100%;" id="getstarted" name="getstarted">
-	<div class="container" style="margin: 0px; width: 100%; padding-right: 0px;">
-		<div class="row" style="margin: 0px; width: 100%;">
-			<div class="col-lg-6" style="margin: 0px;">
-				<h1>
-				iMUN - The all in one MUN solution
-				</h1>
-				<p>iMUN is the all in one solution for managing MUN conferences. Integrating delegate, resolution, debate and press management into one it presents a unified experience making
-				the whole process painless</p>
-				<!--<p>iMUN is currently in active development and we look forward to bringing it to <a href="https://www.westminster.org.uk/life-at-westminster/wesmun">WesMUN</a> in February 2016. We would love to bring it to other MUN conferences globally so please do get in touch if you are running a conference.</p>-->
-				<a class="download-btn contactbutton">Drop us a line!</a>
-			</div>
-			<div class="col-lg-6 hidden-sm hidden-xs hidden-md" style="height: 900px; margin: 0px; background-image: url('https://dash.imun.co.uk/img/website/iPad.png'); background-repeat:no-repeat;">
-			</div>
-		</div>
-	</div>
-</section>
-<!--<section class="testimonials" id="media" style=" background: #5b6869 url('../img/tBG01.jpg') no-repeat left center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; padding: 130px 0;">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12 text-center">
-				<div id="firstSlider">
-					<ul class="slides">
-						<li>
-							<div class="avatar"><img src="https://dash.imun.co.uk/theme/website/img/av-blaz.png" alt="Blaz Robar"></div>
-							<h1>I couldnt possibly use my own eyes to look at the stars, thansk Starnught App.</h1>
-						</li>
-						<li>
-							<div class="avatar"><img src="https://dash.imun.co.uk/theme/website/img/av-pete.png" alt="Pete Finlan"></div>
-							<h1>Staring at the stars has given me feels like never before.</h1>
-						</li>
-						<li>
-							<div class="avatar"><img src="https://dash.imun.co.uk/theme/website/img/av-doge.png" alt="Doge Finbar"></div>
-							<h1>Much flat, many design, so app. Wow.</h1>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>-->
-<section class="features" id="features" style="background: #fff; padding: 70px 0; ">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6 features-leftcol wp2">
-				<h1>Security</h1>
-				<p class="margin-bottom">Security is central to everything we do at iMUN. Your connection to the iMUN servers is encrypted using secure socket layer technology, and these servers are located in London or Ireland. We only use EU data centers for EU customers, and do not rely on safe harbour for your data.
-				iMUN is also independently verified as secure by Comodo security and McAfee.
-				<center>
-					<a href="https://www.mcafeesecure.com/verify?host=https://dash.imun.co.uk"><img src="https://dash.imun.co.uk/img/other/ssl/McAfee.png" /></a>
-				</center>
-			</p>
-		</div>
-			<div class="col-md-6 features-rightcol wp3">
-				<h1>Any event, any load.</h1>
-				<p class="margin-bottom">
-					Using advanced load balancing technology we can handle events from 10 delegates to 10,000 delegates - contact us to find out what makes iMUN so scalable.
-				</p>
-				<h1>Web</h1>
-				<p>
-					iMUN is entirely web based. There is no need to install clunky software, or battle with internal technology teams over security policies, installing software or letting ips through the firewall. Anyone can access iMUN from anywhere in the world, using any internet connection.
-				</p>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12 text-center">
-				<a class="try-btn contactbutton">Contact Us for a Demo</a>
-			</div>
-		</div>
-	</div>
-</section>
-<!--<section class="design" id="design">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div id="secondSlider">
-					<ul class="slides">
-						<li>
-							<div class="col-md-4">
-								<div class="flat-box">
-									<div class="colourway colour1"></div>
-									<p class="title">Extra Startup Juice</p>
-									<p class="feature-text">Added Feature</p>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="flat-box">
-									<div class="colourway colour2"></div>
-									<p class="title">So Thirsty</p>
-									<p class="feature-text">Extra nice UI comes with the app</p>
-								</div>
-							</div>
-							<div class="col-md-4 design-content">
-								<h1>So flat you'll want to give it some shadows</h1>
-								<p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-							</div>
-						</li>
-						<li>
-							<div class="col-md-4">
-								<div class="flat-box">
-									<div class="colourway colour3"></div>
-									<p class="title">Extra Startup Juice</p>
-									<p class="feature-text">Added Feature</p>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="flat-box">
-									<div class="colourway colour4"></div>
-									<p class="title">So Thirsty</p>
-									<p class="feature-text">Extra nice UI comes with the app</p>
-								</div>
-							</div>
-							<div class="col-md-4 design-content">
-								<h1>So flat you'll want to give it some shadows</h1>
-								<p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-							</div>
-						</li>
-					</ul>
-				</div>
-				<div class="col-md-1 col-md-offset-11 text-right controls">
-					<a href="prev" class="prev"><i class="fa fa-angle-left fa-3x"></i></a>
-					<a href="next" class="next"><i class="fa fa-angle-right fa-3x"></i></a>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>-->
-			<footer>
-				<div class="container">
-					<!--<div class="row">
-						<div class="col-md-12">
-							<p>iMUN was created by Freddie Poser &amp; James Bithell for WesMUN 2016. It is an all in one solution for MUN conferences providing advanced management for directors and easy ways for delegates to use the system. It aims to make an MUN easier for all involved.</p>
-						</div>
+				<!--<div class="row">
+					<div class="col-md-2 col-md-offset-5 text-center" style="padding-top: 50px; padding-bottom: 100px;">
+						<a href="https://www.youtube.com/embed/w_q3845U5dM?autoplay=1" class="various fancybox.iframe" style="padding-top: 50px;"><i class="fa fa-play-circle-o fa-5x"></i><br/><br/><br/></a>
+					</div>
+					</div>
+					<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center">
+						<a href="#getstarted" class="get-started-btn">Learn More</a>
+														  <a href="//dash.imun.co.uk" class="get-started-btn">Login</a>
+					</div>
 					</div>-->
-					<div class="row">
-						<div class="col-md-12 text-center">
-							<br/><br/>
-							<img src="https://dash.imun.co.uk/img/logo/iMUN_white_-_trans.png" style="width: 150px;" />
-							<p class="footer-credit">&copy;2017 James Bithell &amp; Freddie Poser</p>
+			</div>
+		</section>
+		<section class="download-now" style="background: #367fa9; width: 100%;" id="getstarted" name="getstarted">
+			<div class="container" style="margin: 0px; width: 100%; padding-right: 0px;">
+				<div class="row" style="margin: 0px; width: 100%;">
+					<div class="col-lg-6" style="margin: 0px;">
+						<h1>
+							iMUN - The all in one MUN solution
+						</h1>
+						<p>iMUN is the all in one solution for managing MUN conferences. Integrating delegate, resolution, debate and press management into one it presents a unified experience making
+							the whole process painless
+						</p>
+						<!--<p>iMUN is currently in active development and we look forward to bringing it to <a href="https://www.westminster.org.uk/life-at-westminster/wesmun">WesMUN</a> in February 2016. We would love to bring it to other MUN conferences globally so please do get in touch if you are running a conference.</p>-->
+						<a class="download-btn" href="mailto:hi@jbithell.com?Subject=iMUN%20Enquiry" target="_top">Drop us a line!</a>
+					</div>
+					<div class="col-lg-6 hidden-sm hidden-xs hidden-md" style="height: 900px; margin: 0px; background-image: url('assets/img/iPad.png'); background-repeat:no-repeat;">
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="features" id="features" style="background: #fff; padding: 70px 0; ">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 features-leftcol wp2">
+						<h1>Security</h1>
+						<p class="margin-bottom">Security is central to everything we do at iMUN. Your connection to the iMUN servers is encrypted using secure socket layer technology, and these servers are located in London or Ireland. We only use EU data centers for EU customers, and do not rely on safe harbour for your data.
+							iMUN is also independently verified as secure by Comodo security and McAfee.
+						<center>
+							<a href="https://www.mcafeesecure.com/verify?host=https://imun.co.uk" target="_blank"><img src="assets/img/McAfee.png" /></a>
+						</center>
+						</p>
+					</div>
+					<div class="col-md-6 features-rightcol wp3">
+						<h1>Any event, any load.</h1>
+						<p class="margin-bottom">
+							Using advanced load balancing technology we can handle events from 10 delegates to 10,000 delegates - contact us to find out what makes iMUN so scalable.
+						</p>
+						<h1>Web</h1>
+						<p>
+							iMUN is entirely web based. There is no need to install clunky software, or battle with internal technology teams over security policies, installing software or letting ips through the firewall. Anyone can access iMUN from anywhere in the world, using any internet connection.
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<a class="try-btn" href="mailto:hi@jbithell.com?Subject=iMUN%20Enquiry" target="_top">Contact Us for a Demo</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section style=" background: url('assets/img/yard.jpg') no-repeat center bottom; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;  padding: 130px 0;">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<div id="firstSlider">
+							<ul class="slides">
+								<li style="color: white;">
+									<div class="avatar"><img src="assets/img/westminsterschool.png" alt="Westminster School" style="width: 200px;"></div>
+									<h1>Westminster School WesMUN 2016<br/>31,000 pageviews | 264 users</h1>
+									<h2><a href="http://blog.bluepost.xyz/post/160908220043/wesmun16stats" target="_blank">Read more on the blog</a></h2>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
-			</footer>
-			<script>
-			function validateEmail($email) {
-				var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-				return emailReg.test( $email );
-			}
-			$(document).ready(function(){
-				$(".contactbutton").click(function() {
-					bootbox.dialog({
-						title: "Contact iMUN",
-						message: '<div class="row">  ' +
-							'<div class="col-md-12"> ' +
-							'<form class="form-horizontal"> ' +
-							'<div class="form-group"> ' +
-							'<label class="col-md-4 control-label" for="form_name">Name</label> ' +
-							'<div class="col-md-8"> ' +
-							'<input id="form_name" type="text" placeholder="Your name" class="form-control input-md"> ' +
-							'</div> ' +
-							'</div><div class="form-group"> ' +
-							'<label class="col-md-4 control-label" for="form_email">E-Mail Address</label> ' +
-							'<div class="col-md-8"> ' +
-							'<input id="form_email" type="email" placeholder="Your E-Mail" class="form-control input-md"> ' +
-							'<span class="help-block">Your E-Mail so we can get back to you</span> </div> ' +
-							'</div><div class="form-group"> ' +
-							'<label class="col-md-4 control-label" for="form_text">Your Message</label> ' +
-							'<div class="col-md-8"> ' +
-							'<textarea id="form_text" placeholder="Your Message" class="form-control input-md"></textarea>' +
-							'<span class="help-block">Your message for our team</span> </div> ' +
-							'</div>' +
-							'</div><div class="form-group"> ' +
-							'<div class="col-md-8 col-md-offset-4"> ' +
-							'<script src="https://www.google.com/recaptcha/api.js"' +
-							'>' + '<' + '/s' + 'cript>' + '<div class="g-recaptcha" data-sitekey="6Le99RETAAAAAAF1C2yqzalz9flu3fO9TXh9tCyj"></div>' +
-							'</div>' +
-							'</form> </div>  </div>',
-						buttons: {
-							success: {
-								label: "Send",
-								className: "btn-success",
-								callback: function () {
-									if(validateEmail($('#form_email').val())) {
-										$.ajax({
-											url: "https://dash.imun.co.uk/ajax/website/contactform/contact_us.php",
-											type : "POST",
-											data : {
-												'name': $('#form_name').val(),
-												'email': $('#form_email').val(),
-												'text': $('#form_text').val(),
-												'g-recaptcha-response' : grecaptcha.getResponse(),
-											},
-											cache : false,
-											success: function(result){
-												console.log(result);
-												if (result == '1') {
-													bootbox.alert("Our Team have recieved your message. <br/><br/>Thank you for contacting us, we hope to get back to you as soon as possible. ", function() {
-														location.reload();
-													});
-												} else if (result == '2') {
-													bootbox.alert("Our Team have recieved your message via E-Mail. <br/><br/>Thank you for contacting us, we hope to get back to you as soon as possible. ", function() {
-														location.reload();
-													});
-												} else if (result == '4') {
-													bootbox.alert("Sorry, you didn't check the 'I am not a Robot box'.", function() {
-														location.reload();
-													});
-												} else {
-													bootbox.alert(result + "Sorry - Operation could not be completed! Please reload the page, or contact us using the E-Mail address support@imun.co.uk.", function() {
-														location.reload();
-													});
-												}
-											}
-										});
-									} else {
-										bootbox.alert("Please enter a valid E-Mail address");
-									}
-								}
-							}
-						}
-					});
-				});
-			});
-			</script>
-		</body>
-	</html>
+			</div>
+		</section>
+		<!--<section class="design" id="design">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div id="secondSlider">
+							<ul class="slides">
+								<li>
+									<div class="col-md-4">
+										<div class="flat-box">
+											<div class="colourway colour1"></div>
+											<p class="title">Extra Startup Juice</p>
+											<p class="feature-text">Added Feature</p>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="flat-box">
+											<div class="colourway colour2"></div>
+											<p class="title">So Thirsty</p>
+											<p class="feature-text">Extra nice UI comes with the app</p>
+										</div>
+									</div>
+									<div class="col-md-4 design-content">
+										<h1>So flat you'll want to give it some shadows</h1>
+										<p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+									</div>
+								</li>
+								<li>
+									<div class="col-md-4">
+										<div class="flat-box">
+											<div class="colourway colour3"></div>
+											<p class="title">Extra Startup Juice</p>
+											<p class="feature-text">Added Feature</p>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="flat-box">
+											<div class="colourway colour4"></div>
+											<p class="title">So Thirsty</p>
+											<p class="feature-text">Extra nice UI comes with the app</p>
+										</div>
+									</div>
+									<div class="col-md-4 design-content">
+										<h1>So flat you'll want to give it some shadows</h1>
+										<p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-1 col-md-offset-11 text-right controls">
+							<a href="prev" class="prev"><i class="fa fa-angle-left fa-3x"></i></a>
+							<a href="next" class="next"><i class="fa fa-angle-right fa-3x"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			</section>-->
+		<footer>
+			<div class="container">
+				<!--<div class="row">
+					<div class="col-md-12">
+						<p>iMUN was created by Freddie Poser &amp; James Bithell for WesMUN 2016. It is an all in one solution for MUN conferences providing advanced management for directors and easy ways for delegates to use the system. It aims to make an MUN easier for all involved.</p>
+					</div>
+					</div>-->
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<br/><br/>
+						<img src="assets/img/iMUN_white_-_trans.png" style="width: 150px;" />
+						<p class="footer-credit">&copy;2017 James Bithell &amp; Freddie Poser</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
