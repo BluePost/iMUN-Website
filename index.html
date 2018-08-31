@@ -202,7 +202,10 @@
                                     <label><input type="checkbox" disabled checked>E-Mail support during the conference with a 4 hour response time <i>(included)</i></label>
                                 </div>
                                 <div class="checkbox">
-                                    <label><input type="checkbox" id="phoneSupport">Phone &amp; live chat support during the conference with a 15 minute response time  <i>(£100 per day for every 500 delegates)</i></label>
+                                    <label><input type="checkbox" id="phoneSupport">Phone &amp; live chat support during the conference with a 15 minute response time (8am-6pm) <i>(£0.40 per delegate per day, £100 minimum charge)</i></label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" id="onSiteSupport">Onsite support during the conference  <i>(same cost as phone support in addition to travel &amp; accommodation expenses for our staff)</i></label>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -265,30 +268,40 @@
 </footer>
 <script>
     function calculatePrice() {
-        var price = 0;
+        var priceAppend = "";
         var delegates = $("#delegatesSlider").slider('getValue');
-       // var chairs = $("#chairsSlider").slider('getValue');
         var press = $("#pressSlider").slider('getValue');
         var days = $("#daysSlider").slider('getValue');
 
-        price += delegates*0.5*days;
-        //price += chairs*2*days;
+        var price = delegates*0.5*days;
         price += press*5*days;
 
-        if ($('#phoneSupport').is(':checked')) {
-            delegatesPer500 = Math.ceil(delegates/500);
-            console.log(Math.ceil(delegates/500))
-            price += days*delegatesPer500*100;
+        if ($('#phoneSupport').is(':checked') || $('#onSiteSupport').is(':checked')) {
+            var priceAddition = delegates*days*0.4;
+            if (priceAddition < 100) {
+                priceAddition = 100*days;
+            }
+            price += priceAddition;
+        }
+        if ($('#onSiteSupport').is(':checked')) {
+            priceAppend = "+ staff expenses";
+            $('#phoneSupport').prop('checked', true); // Checks it
+            $('#phoneSupport').prop('disabled', true);
+        } else {
+            $('#phoneSupport').prop('disabled', false);
         }
 
         if (price <= 30) price = 30;
 
-        $("#priceValue").val(price);
+        $("#priceValue").val(price + " " + priceAppend);
     }
     $(".priceSlider").on("change", function(slideEvt) {
         calculatePrice();
     });
     $("#phoneSupport").on("click", function(slideEvt) {
+        calculatePrice();
+    });
+    $("#onSiteSupport").on("click", function(slideEvt) {
         calculatePrice();
     });
     $( document ).ready(function() {
