@@ -167,8 +167,8 @@
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                 <div class="flat-box">
-                    <p class="title" style="color: black;">Pricing</p>
-                    <p class="feature-text" style="padding-bottom: 0px;">Discounts are available for educational
+                    <p class="title" style="color: black;">Pricing estimate</p>
+                    <p class="feature-text" style="padding-bottom: 0px;">Contact us for a full quote &amp; to discuss your conference's requirements - discounts are available for educational
                         institutions and registered charities.</p>
                     <div class="colourway" style="padding-left: 40px; padding-right: 40px; padding-top: 15px; height: auto; padding-bottom: 20px;">
                         <form>
@@ -205,7 +205,7 @@
                                     <label><input type="checkbox" id="phoneSupport">Phone &amp; live chat support during the conference with a 15 minute response time (8am-6pm) <i>(£0.40 per delegate per day, £100 minimum charge)</i></label>
                                 </div>
                                 <div class="checkbox">
-                                    <label><input type="checkbox" id="onSiteSupport">Onsite support during the conference  <i>(same cost as phone support in addition to travel &amp; accommodation expenses for our staff)</i></label>
+                                    <label><input type="checkbox" id="onSiteSupport">Onsite support during the conference  <i>(includes phone &amp; live chat support - contact us for pricing dependent on your region)</i></label>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -284,7 +284,7 @@
             price += priceAddition;
         }
         if ($('#onSiteSupport').is(':checked')) {
-            priceAppend = "+ staff expenses";
+            priceAppend = "+ staffing quote";
             $('#phoneSupport').prop('checked', true); // Checks it
             $('#phoneSupport').prop('disabled', true);
         } else {
